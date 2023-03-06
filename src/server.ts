@@ -2,6 +2,7 @@ import client from "./config/whatsapp.config";
 import qrcode from "qrcode-terminal";
 import handleMessage from "./controllers/message.controller";
 import { Chat, Message } from "whatsapp-web.js";
+import startAutomation from "./utils";
 
 const startServer = async () => {
   try {
@@ -11,6 +12,7 @@ const startServer = async () => {
 
     client.on("ready", () => {
       console.log("client is ready");
+      startAutomation()
     });
 
     client.on("message", async (message: Message) => {

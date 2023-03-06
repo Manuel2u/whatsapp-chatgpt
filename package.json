@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "server.ts",
   "scripts": {
-    "start": "node ./dist/server.js",
+    "start": "npx vite-node dist/server.js",
     "dev": "npx vite-node src/server.ts",
     "build": "tsc -p ."
   },

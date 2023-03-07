@@ -15,6 +15,7 @@ const startServer = async () => {
       startAutomation();
     });
 
+    
     client.on("message", async (message: Message) => {
       const chat: Chat = await message.getChat();
 

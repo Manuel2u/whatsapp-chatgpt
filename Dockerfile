@@ -10,5 +10,7 @@ RUN yarn install
 
 COPY . .
 
-CMD yarn run dev
+RUN yarn run build
+
+CMD yarn start
 

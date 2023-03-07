@@ -2,14 +2,14 @@ FROM node:18.12.1-alpine3.16
 
 # Installs latest Chromium (100) package.
 RUN apk add --no-cache \
-    chromium \
-    nss \
-    freetype \
-    harfbuzz \
-    ca-certificates \
-    ttf-freefont \
-    nodejs \
-    yarn
+      chromium \
+      nss \
+      freetype \
+      harfbuzz \
+      ca-certificates \
+      ttf-freefont \
+      nodejs \
+      yarn
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
@@ -31,13 +31,10 @@ COPY package.json ./
 
 COPY yarn.lock ./
 
-RUN yarn install
+RUN yarn install --ignore-optional && yarn cache clean
 
 COPY . .
 
-RUN yarn add puppeteer@13.5.0
+RUN yarn add puppeteer@13.5.0 && yarn add vite-node
 
-RUN  yarn add vite-node
-
-CMD yarn run dev
-
+CMD ["yarn", "run", "dev"]

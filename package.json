@@ -10,6 +10,7 @@
     "dev": "npx vite-node src/server.ts",
     "build": "tsc -p ."
   },
+  "bson": "4.4.2",
   "devDependencies": {
     "@types/node": "^18.14.6",
     "@types/node-cron": "^3.0.7",

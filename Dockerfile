@@ -8,9 +8,11 @@ COPY yarn.lock ./
 
 RUN yarn install
 
+RUN apk update && apk add --no-cache chromium
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
+
 COPY . .
 
 RUN yarn add vite-node
 
 CMD yarn run dev
-

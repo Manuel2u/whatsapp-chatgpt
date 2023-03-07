@@ -10,7 +10,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run build
+RUN yarn add vite-node
 
-CMD yarn start
+CMD yarn run dev
 

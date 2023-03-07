@@ -2,7 +2,7 @@
     "apps": [
       {
         "name": "chatgtp-whatsapp",
-        "script": "npx vite-node src/index.ts",
+        "script": "npx vite-node src/server.ts",
         "instances": 1,
         "autorestart": true,
         "watch": false,

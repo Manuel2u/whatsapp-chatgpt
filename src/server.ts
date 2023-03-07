@@ -12,11 +12,12 @@ const startServer = async () => {
 
     client.on("ready", () => {
       console.log("client is ready");
-      startAutomation()
+      startAutomation();
     });
 
     client.on("message", async (message: Message) => {
       const chat: Chat = await message.getChat();
+
       if (chat.isGroup) {
         return null;
       }
@@ -26,17 +27,18 @@ const startServer = async () => {
       if (message.from === "status@broadcast") {
         return null;
       }
-      const response: any = await new Promise((resolve, reject) => {
-        handleMessage(message.body, (err: any, res: any) => {
-          if (err) {
-            reject(new Error(err));
-          } else {
-            resolve(res);
-          }
+      if (message.body.startsWith("! ")) {
+        const response: any = await new Promise((resolve, reject) => {
+          handleMessage(message.body, (err: any, res: any) => {
+            if (err) {
+              reject(new Error(err));
+            } else {
+              resolve(res);
+            }
+          });
         });
-      });
-
-      message.reply(response);
+        message.reply(response);
+      }
     });
 
     client.initialize();

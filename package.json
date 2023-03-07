@@ -5,6 +5,9 @@
   "author": "manuel_dev",
   "license": "MIT",
   "main": "server.ts",
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "scripts": {
     "start": "npx vite-node dist/server.js",
     "dev": "npx vite-node src/server.ts",

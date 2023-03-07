@@ -4,12 +4,16 @@ import handleMessage from "./controllers/message.controller";
 import { Chat, Message } from "whatsapp-web.js";
 import startAutomation from "./utils";
 
+let qrGenerated = false; // add this flag
+
 const startServer = async () => {
   try {
     client.on("qr", (qr) => {
-      qrcode.generate(qr, { small: true });
+      if (!qrGenerated) {
+        qrcode.generate(qr, { small: true });
+        qrGenerated = true;
+      }
     });
-
     client.on("ready", () => {
       console.log("client is ready");
       startAutomation();
@@ -27,7 +31,7 @@ const startServer = async () => {
       if (message.from === "status@broadcast") {
         return null;
       }
-      if (message.body.startsWith("! ")) {
+      if (message.body.startsWith("! ") || message.body.startsWith("!")) {
         const response: any = await new Promise((resolve, reject) => {
           handleMessage(message.body, (err: any, res: any) => {
             if (err) {

@@ -35,7 +35,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn remove puppeteer
+RUN yarn remove puppeteer --force
 
 RUN yarn add puppeteer@13.5.0
 

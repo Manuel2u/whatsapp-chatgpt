@@ -34,5 +34,5 @@ RUN yarn add puppeteer@13.5.0
 
 RUN  yarn add vite-node
 
-CMD yarn run dev
+CMD yarn run prod
 

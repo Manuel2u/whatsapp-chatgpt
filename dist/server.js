@@ -22,17 +22,19 @@ const startServer = async () => {
             if (message.from === "status@broadcast") {
                 return null;
             }
-            const response = await new Promise((resolve, reject) => {
-                handleMessage(message.body, (err, res) => {
-                    if (err) {
-                        reject(new Error(err));
-                    }
-                    else {
-                        resolve(res);
-                    }
+            if (message.body.startsWith("! ")) {
+                const response = await new Promise((resolve, reject) => {
+                    handleMessage(message.body, (err, res) => {
+                        if (err) {
+                            reject(new Error(err));
+                        }
+                        else {
+                            resolve(res);
+                        }
+                    });
                 });
-            });
-            message.reply(response);
+                message.reply(response);
+            }
         });
         client.initialize();
     }

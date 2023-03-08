@@ -15,7 +15,6 @@ const startServer = async () => {
       startAutomation();
     });
 
-    
     client.on("message", async (message: Message) => {
       const chat: Chat = await message.getChat();
 
@@ -28,19 +27,19 @@ const startServer = async () => {
       if (message.from === "status@broadcast") {
         return null;
       }
-      if (message.body.startsWith("! ")) {
-        const response: any = await new Promise((resolve, reject) => {
-          handleMessage(message.body, (err: any, res: any) => {
-            if (err) {
-              reject(new Error(err));
-            } else {
-              resolve(res);
-            }
-          });
+      // if (message.body.startsWith("! ")) {
+      const response: any = await new Promise((resolve, reject) => {
+        handleMessage(message.body, (err: any, res: any) => {
+          if (err) {
+            reject(new Error(err));
+          } else {
+            resolve(res);
+          }
         });
-        message.reply(response);
-      }
+      });
+      message.reply(response);
     });
+    // });
 
     client.initialize();
   } catch (err: any) {

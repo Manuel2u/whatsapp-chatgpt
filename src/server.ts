@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 
 const startClient = async () => {
   try {
-    client.on("qr", (qr) => {
+    client.on("qr", (qr: string) => {
       qrcode.generate(qr, { small: true });
     });
 

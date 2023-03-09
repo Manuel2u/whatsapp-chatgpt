@@ -3,8 +3,14 @@ import qrcode from "qrcode-terminal";
 import handleMessage from "./controllers/message.controller";
 import { Chat, Message } from "whatsapp-web.js";
 import startAutomation from "./utils";
+import express from "express";
+const app = express();
 
-const startServer = async () => {
+app.get("/", (req, res) => {
+  res.send("Hello, welcome to my Bot!");
+});
+
+const startClient = async () => {
   try {
     client.on("qr", (qr) => {
       qrcode.generate(qr, { small: true });
@@ -39,12 +45,14 @@ const startServer = async () => {
       });
       message.reply(response);
     });
-    // });
 
-    client.initialize();
+    await client.initialize();
   } catch (err: any) {
     console.log(`Failed to initialize the client: ${err.message}`);
   }
 };
 
-startServer();
+app.listen(process.env.PORT || 3000, async () => {
+  await startClient();
+  console.log(`Server is listening on port ${process.env.PORT || 3000}`);
+});

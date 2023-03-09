@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "server.ts",
   "engines": {
-    "node" : ">16"
+    "node": ">=14.20.1"
   },
   "scripts": {
     "start": "npx vite-node dist/server.js",

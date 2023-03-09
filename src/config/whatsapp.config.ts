@@ -16,8 +16,6 @@ mongoose.connect(process.env.MONGODB_URI || "").then(() => {
       backupSyncIntervalMs: 300000,
     }),
   });
-
-  client.initialize();
 });
 
 export default client;

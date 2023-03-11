@@ -8,7 +8,8 @@
   "scripts": {
     "start": "npx vite-node dist/server.js",
     "dev": "npx vite-node src/server.ts",
-    "build": "tsc -p ."
+    "build": "tsc",
+    "tsc": "./node_modules/typescript/bin/tsc"
   },
   "engines": {
     "node": ">=14.20.1"

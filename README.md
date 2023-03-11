@@ -17,11 +17,11 @@
 
   <img alt="License" src="https://img.shields.io/github/license/Manuel2u/whatsapp-chatgpt?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/Manuel2u/whatsapp-chatgpt?color=56BEB8" /> -->
+  <img alt="Github issues" src="https://img.shields.io/github/issues/Manuel2u/whatsapp-chatgpt?color=56BEB8" />
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/Manuel2u/whatsapp-chatgpt?color=56BEB8" /> -->
+  <img alt="Github forks" src="https://img.shields.io/github/forks/Manuel2u/whatsapp-chatgpt?color=56BEB8" />
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/Manuel2u/whatsapp-chatgpt?color=56BEB8" /> -->
+  <img alt="Github stars" src="https://img.shields.io/github/stars/Manuel2u/whatsapp-chatgpt?color=56BEB8" />
 </p>
 
 <!-- Status -->

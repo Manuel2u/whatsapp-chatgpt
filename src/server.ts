@@ -3,12 +3,12 @@ import qrcode from "qrcode-terminal";
 import handleMessage from "./controllers/message.controller";
 import { Chat, Message } from "whatsapp-web.js";
 import startAutomation from "./utils";
-import express from "express";
-const app = express();
+// import express from "express";
+// const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello, welcome to my Bot!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello, welcome to my Bot!");
+// });
 
 const startClient = async () => {
   try {
@@ -52,7 +52,7 @@ const startClient = async () => {
   }
 };
 
-app.listen(process.env.PORT || 3000, async () => {
-  await startClient();
-  console.log(`Server is listening on port ${process.env.PORT || 3000}`);
-});
+// app.listen(process.env.PORT || 3000, async () => {
+startClient();
+//   console.log(`Server is listening on port ${process.env.PORT || 3000}`);
+// });

@@ -9,19 +9,19 @@
 <h1 align="center">Chatgpt Whatsapp</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Manuel2u/chatgpt-whatsapp?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Manuel2u/whatsapp-chatgpt?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Manuel2u/chatgpt-whatsapp?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Manuel2u/whatsapp-chatgpt?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Manuel2u/chatgpt-whatsapp?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Manuel2u/whatsapp-chatgpt?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/Manuel2u/chatgpt-whatsapp?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/Manuel2u/whatsapp-chatgpt?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/Manuel2u/chatgpt-whatsapp?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/Manuel2u/whatsapp-chatgpt?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/Manuel2u/chatgpt-whatsapp?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/Manuel2u/whatsapp-chatgpt?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/Manuel2u/chatgpt-whatsapp?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/Manuel2u/whatsapp-chatgpt?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -72,7 +72,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/Manuel2u/chatgpt-whatsapp
+$ git clone https://github.com/Manuel2u/whatsapp-chatgpt
 
 # Access
 $ cd chatgpt-whatsapp

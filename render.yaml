@@ -1,0 +1,7 @@
+services:
+  - name: chatgpt-whatsapp
+    dockerfile: Dockerfile
+    env:
+      - name: PUPPETEER_EXECUTABLE_PATH
+        value: /usr/bin/chromium-browser
+    plan: starter

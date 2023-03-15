@@ -1,4 +1,4 @@
-FROM node:18.12.1-alpine3.16
+FROM node:14-alpine
 
 # Installs latest Chromium (100) package.
 RUN apk add --no-cache \
@@ -20,19 +20,16 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 # Run everything after as non-privileged user.
 
-WORKDIR /app
 
-COPY package.json ./
 
-COPY yarn.lock ./
+WORKDIR /
 
-RUN yarn install
+COPY package*.json ./
+RUN npm install
 
 COPY . .
 
-RUN yarn add puppeteer@13.5.0
+RUN npm run build
 
-RUN  yarn add vite-node
-
-CMD yarn run dev
+CMD ["npm", "start"]
 
